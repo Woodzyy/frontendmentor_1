@@ -1,0 +1,20 @@
+@mixin flex($flex, $dir, $js, $ai, $wr) {
+    justify-content: $flex;
+    flex-direction: $dir;
+    justify-content: $js;
+    align-items: $ai;
+    flex-wrap: $wr;
+}
+
+@mixin setWrapper ($width, $mar, $pad) {
+    width: $width;
+    margin: $mar;
+    padding: $pad;
+}
+
+@mixin setFont ($ff, $fs, $fw, $lh) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}

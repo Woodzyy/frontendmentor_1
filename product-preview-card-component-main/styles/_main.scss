@@ -1,0 +1,8 @@
+.main {
+    @include setWrapper (95%, 50% auto, 0);
+    border: 2px solid black;
+
+    @media screen and (min-width: $desk) {
+        @include setWrapper (50%, auto, 0);
+    }
+}
