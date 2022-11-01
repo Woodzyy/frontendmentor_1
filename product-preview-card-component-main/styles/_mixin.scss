@@ -1,5 +1,5 @@
 @mixin flex($flex, $dir, $js, $ai, $wr) {
-    justify-content: $flex;
+    display: $flex;
     flex-direction: $dir;
     justify-content: $js;
     align-items: $ai;
@@ -12,8 +12,7 @@
     padding: $pad;
 }
 
-@mixin setFont ($ff, $fs, $fw, $lh) {
-    font-family: $ff;
+@mixin setFont ($fs, $fw, $lh) {
     font-size: $fs;
     font-weight: $fw;
     line-height: $lh;

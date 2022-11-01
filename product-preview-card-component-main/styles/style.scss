@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat:wght@400;700&display=swap');
 @import 'variables';
 @import 'mixin';
 @import 'main';
@@ -5,4 +6,5 @@
 
 body {
     background-color: $cream;
+    @include flex (flex, row, center, center, wrap)
 }
