@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat:wght@500;700&display=swap");
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100vh;
   width: 100%;
-  border: 2px solid red;
 }
 .wrapper .main {
   display: flex;
@@ -13,20 +18,54 @@
   margin: 0 auto;
   padding: 0;
   border-radius: 10px;
+  background-color: #ffffff;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 450px) {
   .wrapper .main {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 680px;
     margin: 0 auto;
     padding: 0;
+  }
+}
+.wrapper .main .image {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .main .image {
+    width: 340px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    border-radius: 10px 0 0 10px;
   }
 }
 .wrapper .main .image .image-mobile {
   border-radius: 10px 10px 0 0;
   width: 100%;
 }
+@media screen and (min-width: 450px) {
+  .wrapper .main .image .image-mobile {
+    display: none;
+  }
+}
 .wrapper .main .image .image-desktop {
   display: none;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .main .image .image-desktop {
+    width: 340px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    border-radius: 10px 0 0 10px;
+  }
 }
 .wrapper .main .cart {
   display: flex;
@@ -34,11 +73,25 @@
   justify-content: center;
   align-items: start;
   flex-wrap: nowrap;
-  width: auto;
+  width: 100%;
   margin: 0;
   padding: 5% 8%;
   background-color: #ffffff;
   border-radius: 0 0 10px 10px;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .main .cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: nowrap;
+    width: 340px;
+    margin: 0;
+    padding: 7% 7%;
+    height: 510px;
+    border-radius: 0 10px 10px 0;
+  }
 }
 .wrapper .main .cart .heading {
   font-size: 0.9rem;
@@ -55,21 +108,28 @@
   width: auto;
   margin: 0;
   padding: 1.5% 0 2.5%;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
   line-height: 1;
   font-family: "Fraunces", serif;
   color: #1C232B;
 }
 .wrapper .main .cart .subtitle {
-  width: 84%;
+  width: auto;
   margin: 0;
   padding: 1.5% 0;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.5;
   font-family: "Montserrat", serif;
   color: #6C7289;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .main .cart .subtitle {
+    width: 100%;
+    margin: 0;
+    padding: 1.5% 0;
+  }
 }
 .wrapper .main .cart .price {
   width: 100%;
@@ -81,6 +141,12 @@
   align-items: center;
   flex-wrap: nowrap;
   font-family: "Fraunces", serif;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .main .cart .price {
+    -moz-column-gap: 18px;
+         column-gap: 18px;
+  }
 }
 .wrapper .main .cart .price .newprice {
   width: 50%;
@@ -120,6 +186,36 @@
   background-color: #3C8067;
   color: #ffffff;
 }
+@media screen and (min-width: 450px) {
+  .wrapper .main .cart .btn:hover {
+    background-color: #1d5842;
+  }
+}
+.wrapper .main .cart .btn:active {
+  background-color: #1cc486;
+}
+.wrapper .attribution {
+  width: 100%;
+  margin: 0;
+  padding: 1%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #6C7289;
+  font-family: "Montserrat", serif;
+  font-size: 11px;
+  text-align: center;
+}
+@media screen and (min-width: 450px) {
+  .wrapper .attribution {
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+  }
+}
+.wrapper .attribution .attribution-link {
+  color: #3C8067;
+}
 
 * {
   margin: 0;
@@ -142,9 +238,4 @@ ul {
 
 body {
   background-color: #F2EBE3;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
